@@ -10,6 +10,7 @@ import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
 import com.google.api.server.spi.config.Named;
+import com.udacity.gradle.jokes.Joker;
 
 /** An endpoint class we are exposing */
 @Api(
@@ -37,7 +38,9 @@ public class MyEndpoint {
     @ApiMethod(name = "tellJoke")
     public MyBean tellJoke() {
         MyBean response = new MyBean();
-        response.setData("test backend joke");
+        Joker joker = new Joker();
+        String joke = joker.getJoke() + " Fetched from backend!";
+        response.setData(joke);
         return response;
     }
 
