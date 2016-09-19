@@ -52,13 +52,6 @@ public class MainActivity extends ActionBarActivity {
             }
         }.execute();
 
-//        String joke = joker.getJoke();
-//        Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
-//        Intent intent = new Intent(this,JokeActivity.class);
-//        intent.putExtra(JokeActivity.JOKE_TAG,joke);
-//        startActivity(intent);
-
-//        Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
     }
 
 
